@@ -91,8 +91,8 @@ const EntourageSection = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 8.7 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
-            <div className="text-center">
+          <div className="grid grid-cols-2 gap-8 max-w-2xl mx-auto">
+            <div className="text-right">
               <h3 className="text-sm md:text-lg font-display font-semibold mb-3 text-[#004b4f]">
                 Matron of Honor
               </h3>
@@ -102,7 +102,7 @@ const EntourageSection = () => {
                 </p>
               ))}
             </div>
-            <div className="text-center">
+            <div className="text-left">
               <h3 className="text-sm md:text-lg font-display font-semibold mb-3 text-[#004b4f]">
                 Best Man
               </h3>
