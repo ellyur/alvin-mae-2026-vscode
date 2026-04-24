@@ -1,6 +1,83 @@
 import { motion } from 'framer-motion';
+import { useEffect, useRef, RefObject } from 'react';
 
-const SaveTheDateVideoSection = () => {
+interface SaveTheDateVideoSectionProps {
+  audioRef?: RefObject<HTMLAudioElement>;
+}
+
+const SaveTheDateVideoSection = ({ audioRef }: SaveTheDateVideoSectionProps) => {
+  const playerRef = useRef<any>(null);
+
+  useEffect(() => {
+    // Load YouTube IFrame API if not already loaded
+    if (!window.YT) {
+      const existingScript = document.querySelector(
+        'script[src="https://www.youtube.com/iframe_api"]'
+      );
+      if (!existingScript) {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag?.parentNode?.insertBefore(tag, firstScriptTag);
+      }
+    }
+
+    const initPlayer = () => {
+      if (playerRef.current) return;
+      if (!window.YT || !window.YT.Player) return;
+
+      playerRef.current = new window.YT.Player('save-the-date-player-container', {
+        height: '100%',
+        width: '100%',
+        videoId: '-vPZniifnO4',
+        playerVars: {
+          rel: 0,
+          modestbranding: 1,
+        },
+        events: {
+          onStateChange: (event: any) => {
+            const playerState = event.data;
+
+            if (playerState === window.YT.PlayerState.PLAYING && audioRef?.current) {
+              audioRef.current.pause();
+            } else if (
+              (playerState === window.YT.PlayerState.ENDED ||
+                playerState === window.YT.PlayerState.PAUSED) &&
+              audioRef?.current
+            ) {
+              audioRef.current.play().catch(() => {
+                console.log('Could not resume audio');
+              });
+            }
+          },
+        },
+      });
+    };
+
+    if (window.YT && window.YT.Player) {
+      initPlayer();
+    } else {
+      const previousCallback = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = () => {
+        if (typeof previousCallback === 'function') {
+          previousCallback();
+        }
+        initPlayer();
+      };
+    }
+
+    return () => {
+      if (playerRef.current && typeof playerRef.current.destroy === 'function') {
+        try {
+          playerRef.current.destroy();
+        } catch (e) {
+          // ignore
+        }
+        playerRef.current = null;
+      }
+    };
+  }, [audioRef]);
+
   return (
     <motion.section
       id="save-the-date-video"
@@ -30,11 +107,8 @@ const SaveTheDateVideoSection = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           data-testid="save-the-date-video-embed"
         >
-          <iframe
-            src="https://www.youtube.com/embed/-vPZniifnO4?rel=0&modestbranding=1"
-            title="Save The Date Video"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
+          <div
+            id="save-the-date-player-container"
             className="absolute inset-0 w-full h-full"
           />
         </motion.div>

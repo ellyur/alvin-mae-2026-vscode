@@ -107,7 +107,7 @@ const Index = () => {
           alt="Cover 4"
         />
         <HashtagGiftsSection />
-        <SaveTheDateVideoSection />
+        <SaveTheDateVideoSection audioRef={audioRef} />
         <MemorableMomentsSection />
         <RSVPSection />
         <CoverSection
