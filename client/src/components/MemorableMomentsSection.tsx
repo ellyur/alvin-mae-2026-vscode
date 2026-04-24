@@ -20,19 +20,19 @@ const landscapeImages = [
 ];
 
 const portraitImages = [
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928679/port1_jicp6x.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928679/port2_w4f5it.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928679/port3.1_yqbset.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928680/port4_w6ounb.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928680/port5_vqkxmy.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928680/port6_hkrwry.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928161/7port_uyqbtn.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928680/port8_ifluum.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928678/port_ptx1hr.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928680/portport_rnu7hf.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928680/portportport_yzycyi.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928681/portportportport_pdyelk.jpg",
-  "https://res.cloudinary.com/dmdxbaecc/image/upload/q_auto/f_auto/v1776928159/1port2_lqedoy.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005029/A_atrcqq.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005029/C_k5hjt4.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005030/E_lv3sa8.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005030/D_qrmtgq.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005030/B_onnnnh.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005030/L_ka6blk.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005030/G_spbdqz.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005030/F_bxdwes.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005030/H_s5e889.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005030/I_gkbcrn.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005031/K_jbdc6n.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005031/M_gshp48.jpg",
+  "https://res.cloudinary.com/dhrxjdsez/image/upload/v1777005041/N_ijaezx.jpg",
 ];
 
 interface PhotoCarouselProps {
