@@ -55,7 +55,7 @@ const EntourageSection = () => {
       "EMMA MATRIANO",
       "VIRGINIA ARENAS",
       "ROWENA RUBIO-ZONIO",
-      "JACQUELYN NAMORO",
+      "JACQUELINE NAMORO",
       "RACHEL LIBANTOCIA",
       "CARMELITA BALBON",
     ],
