@@ -43,6 +43,9 @@ const EntourageSection = () => {
       "SERGIE BEÑAS",
       "ALVIN IMPAS",
       "SAMUEL DOMINGONO",
+      "Roland Sobreviñas",
+      "Cristituto Sumilhig",
+      "Exequiel Nuñez",
     ],
     principalSponsorsLadies: [
       "BABY MEDINA",
@@ -58,6 +61,8 @@ const EntourageSection = () => {
       "JACQUELINE NAMORO",
       "RACHEL LIBANTOCIA",
       "CARMELITA BALBON",
+      "Catalina Nuñez",
+      "Felisa Sumilhig",
     ],
   };
 
