@@ -61,7 +61,7 @@ const EntourageSection = () => {
       "JACQUELINE NAMORO",
       "RACHEL LIBANTOCIA",
       "CARMELITA BALBON",
-      "Catalina NuñezCATALINA NUÑEZ",
+      "CATALINA NUÑEZ",
       "FELISA SUMILHIG",
     ],
   };
